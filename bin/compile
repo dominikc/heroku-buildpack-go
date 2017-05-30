@@ -450,8 +450,8 @@ case "${TOOL}" in
         ensureGB "${GBVersion}"
 
         cd $build
-        step "Running: gb build ${FLAGS[@]}"
-        gb build "${FLAGS[@]}" 2>&1
+        step "Running: make"
+        make
 
         step "Post Compile Cleanup"
         for f in bin/*-heroku; do
